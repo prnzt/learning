@@ -14,11 +14,35 @@ public class EmployeeServiceImpl implements EmployeeService{
 
 	@Autowired
 	EmployeeDao employeeDao;
+	Employee employee;
 	
 	@Override
 	public List<Employee> getAllEmployeeDetails() {
 		return employeeDao.getAllEmployees();
 		
+	}
+	
+	@Override
+	public Employee getEmployeeDetailsById(int id) {
+		return employeeDao.getEmployeeById(id);
+		
+	}
+
+	@Override
+	public int deleteEmployeeById(int id) 
+	{
+		return employeeDao.deleteEmployeeById(id);
+	}
+	
+	public int addEmployee(Employee employee)
+	{
+		return employeeDao.addEmployee(employee);
+		
+	}
+	
+	public int updateEmployee(Employee employee)
+	{
+		return employeeDao.updateEmployee(employee);
 	}
 
 }

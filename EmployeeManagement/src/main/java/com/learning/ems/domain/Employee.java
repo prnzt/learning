@@ -32,7 +32,19 @@ public class Employee {
 
 
 
-
+	public Employee(int employeeId, String employeeName, String employeeDept, Date employeeDOJ,
+			Date employeeDOB, String employeeRole, String employeeAddress, long employeeSalary) {
+		super();
+		
+		this.employeeId = employeeId;
+		this.employeeName = employeeName;
+		this.employeeDept = employeeDept;
+		this.employeeDOJ = employeeDOJ;
+		this.employeeDOB = employeeDOB;
+		this.employeeRole = employeeRole;
+		this.employeeAddress = employeeAddress;
+		this.employeeSalary = employeeSalary;
+	}
 
 	public int getId() {
 		return id;
