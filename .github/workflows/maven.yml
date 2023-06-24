@@ -33,6 +33,10 @@ jobs:
         postgresql version: '15'
         postgresql db: 'studentmanagement'
         postgresql user: 'postgres'
-        postgresql password: 'admin'    
-    - name: Build with Maven
+        postgresql password: 'admin' 
+    - name: Change to project directory
+      run: cd StudentManagementSystem
+    - name: Build with Maven      
       run: mvn -B package --file StudentManagementSystem/pom.xml
+    - name: Building application jar file     
+      run: mvn clean install
